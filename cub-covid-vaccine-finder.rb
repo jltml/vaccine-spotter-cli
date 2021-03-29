@@ -7,8 +7,10 @@ require 'tty-progressbar'
 require 'tty-logger'
 require 'date'
 
+Watir.default_timeout = 300
 browser = Watir::Browser.new
 browser.goto 'https://svu.marketouchmedia.com/SVUSched/program/program1987/Patient/Advisory'
+browser.text_field(name: "zip").wait_until(&:present?)
 cookie = "ASP.NET_SessionId=0; QueueITAccepted-SDFrts345E-V3_cubsupervalucovid19=#{browser.cookies.to_a[-1][:value]};"
 browser.close
 
