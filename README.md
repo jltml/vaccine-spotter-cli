@@ -1,4 +1,4 @@
-***Note: I think something changed with the way the Cub website handles ZIP code checking? It keep returning a blank string (normally it says 'no locations available…'), and I'm not sure what that means. I hope to figure it out soon.***
+***Note: I think something changed with the way the Cub website handles ZIP code checking? It keeps returning a blank string (normally it says 'no locations available…'), and I'm not sure what that means. I hope to figure it out soon.***
 
 # covid-vaccine-finders
 **CLI app(s) to help you find COVID-19 vaccines.**
