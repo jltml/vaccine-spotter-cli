@@ -1,9 +1,9 @@
-***Note: I think something changed with the way the Cub website handles ZIP code checking? It keeps returning a blank string (normally it says 'no locations available…'), and I'm not sure what that means. I hope to figure it out soon.***
-
 # covid-vaccine-finders
 **CLI app(s) to help you find COVID-19 vaccines.**
 
-The only place this works for right now is Cub (in Minnesota) — I noticed that they weren't included on https://www.vaccinespotter.org ([GitHub](https://github.com/GUI/covid-vaccine-spotter)), and they have one of those annoying websites that only shows appointments at locations within a 10 mile radius… so I compiled a list of the ZIP codes of all Cubs in Minnesota and made a simple Ruby script to check each one. I had to do some finessing with the cookies and session IDs, which is why it opens Chrome (to obtain the cookie), but it seems to be working thus far, though I have yet to see an opening.
+As of right now, the only places I've written scripts for are:
+1. a command-line wrapper around the incredible https://vaccinespotter.org ([GitHub repo](https://github.com/GUI/covid-vaccine-spotter)), using their very beta API, that will check for appointments matching a set of conditions and send a notification when one is found (I still need to make it not send duplicate notifications, though so…).
+2. Cub (in Minnesota) — I noticed that they weren't included on https://www.vaccinespotter.org, and they have one of those annoying websites that only shows appointments at locations within a 10 mile radius… so I compiled a list of the ZIP codes of all Cubs in Minnesota and made a simple Ruby script to check each one. I had to do some finessing with the cookies and session IDs, which is why it opens Chrome (to obtain the cookie), but it seems to be working (mostly?) thus far, though I have yet to see an opening. *Update: I think something might have changed with the way the Cub website handles ZIP code checking? It keeps returning a blank string (normally it says 'no locations available…'), and I'm not sure what that means. I hope to figure it out soon.*
 
 ## Installation
 
@@ -21,6 +21,8 @@ The only place this works for right now is Cub (in Minnesota) — I noticed tha
 
 ```sh
 ruby cub-covid-vaccine-finder.rb
+# or
+ruby vaccine-spotter.rb
 ```
 
 That's it! I hope to add options and other pharmacies soon.
