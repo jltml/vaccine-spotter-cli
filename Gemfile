@@ -10,3 +10,4 @@ gem 'webdrivers', '~> 4.0'
 gem "nokogiri", "~> 1.11"
 gem "tty-prompt", "~> 0.23.0"
 gem "tty-spinner", "~> 0.9.3"
+gem "terminal-notifier", "~> 2.0"

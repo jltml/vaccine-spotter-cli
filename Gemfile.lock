@@ -14,6 +14,7 @@ GEM
       childprocess (>= 0.5, < 4.0)
       rubyzip (>= 1.2.2)
     strings-ansi (0.2.0)
+    terminal-notifier (2.0.0)
     tty-color (0.6.0)
     tty-cursor (0.7.1)
     tty-logger (0.6.0)
@@ -49,6 +50,7 @@ PLATFORMS
 DEPENDENCIES
   curb (~> 0.9.11)
   nokogiri (~> 1.11)
+  terminal-notifier (~> 2.0)
   tty-logger (~> 0.6.0)
   tty-progressbar (~> 0.18.2)
   tty-prompt (~> 0.23.0)
