@@ -2,6 +2,7 @@
 # This is basically a wrapper aroung https://vaccinespotter.org
 # It'll alert you based on the condtions on line 22
 # Uncomment the last bit of that line to filter by vaccine type, or adust it to however you prefer
+# I still need to make it not send duplicate notifications… sorry about that
 ###
 
 
