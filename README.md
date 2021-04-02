@@ -9,7 +9,7 @@ As of right now, the only places I've written scripts for are:
 
 ### Prerequisites
 - **Ruby** and Bundler, preferably installed with [rbenv](https://github.com/rbenv/rbenv)… or something else, I guess, but I'm very partial to rbenv (tested against Ruby 3.0.0)
-- **Chrome** (which the script will open to get a cookie)
+- **Chrome** (which the Cub script will open to get a cookie)
 
 ### Actually installing
 0. `cd` to a folder where you'd like to download this
