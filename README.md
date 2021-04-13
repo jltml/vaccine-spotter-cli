@@ -1,5 +1,4 @@
-# vaccine-finder
-**CLI app(s) to help you find COVID-19 vaccines.**
+# vaccine-finder — a CLI
 
 ### Update: now on RubyGems(!)
 This is my first gem ever! I'm hoping that I can also make it into a Homebrew formula soon, too. For now, install with `gem install vaccine-finder` or see the installation section below.
