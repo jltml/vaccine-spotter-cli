@@ -23,6 +23,7 @@ gem install vaccine-finder
 ```
 
 **For the Cub script or for development:**
+
 0. `cd` to a folder where you'd like to download this
 1. Clone this repo with `git clone https://github.com/jltml/vaccine-finder.git`
 2. Do `cd vaccine-finder` to go to the project's folder
@@ -40,6 +41,7 @@ The first time you run `vaccine-finder`, it will guide you through creating a co
 
 
 **For the Cub script:**
+
 First, `cd` to where you cloned the project, then run:
 
 ```sh
