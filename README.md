@@ -1,4 +1,4 @@
-# covid-vaccine-finders
+# vaccine-finder
 **CLI app(s) to help you find COVID-19 vaccines.**
 
 ### Update: now on RubyGems(!)
@@ -25,8 +25,8 @@ gem install vaccine-finder
 
 **For the Cub script or for development:**
 0. `cd` to a folder where you'd like to download this
-1. Clone this repo with `git clone https://github.com/jltml/covid-vaccine-finders.git`
-2. Do `cd covid-vaccine-finders` to go to the project's folder
+1. Clone this repo with `git clone https://github.com/jltml/vaccine-finder.git`
+2. Do `cd vaccine-finder` to go to the project's folder
 3. Run `bundle install` to install dependencies
 
 ## Usage
