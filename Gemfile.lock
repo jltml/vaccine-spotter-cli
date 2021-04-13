@@ -1,12 +1,18 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    addressable (2.7.0)
+      public_suffix (>= 2.0.2, < 5.0)
     childprocess (3.0.0)
     curb (0.9.11)
+    launchy (2.5.0)
+      addressable (~> 2.7)
     nokogiri (1.11.2-x86_64-darwin)
       racc (~> 1.4)
+    parslet (1.8.2)
     pastel (0.8.0)
       tty-color (~> 0.5)
+    public_suffix (4.0.6)
     racc (1.5.2)
     regexp_parser (2.1.1)
     rubyzip (2.3.0)
@@ -15,7 +21,10 @@ GEM
       rubyzip (>= 1.2.2)
     strings-ansi (0.2.0)
     terminal-notifier (2.0.0)
+    toml (0.2.0)
+      parslet (~> 1.8.0)
     tty-color (0.6.0)
+    tty-config (0.4.0)
     tty-cursor (0.7.1)
     tty-logger (0.6.0)
       pastel (~> 0.8)
@@ -49,8 +58,12 @@ PLATFORMS
 
 DEPENDENCIES
   curb (~> 0.9.11)
+  launchy (~> 2.5)
   nokogiri (~> 1.11)
+  pastel (~> 0.8.0)
   terminal-notifier (~> 2.0)
+  toml (~> 0.2.0)
+  tty-config (~> 0.4.0)
   tty-logger (~> 0.6.0)
   tty-progressbar (~> 0.18.2)
   tty-prompt (~> 0.23.0)
