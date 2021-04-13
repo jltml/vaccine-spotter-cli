@@ -26,7 +26,9 @@ if !config.exist?
   puts "It looks like you don't have a configuration file yet. Would you like to create one?"
   create_config = prompt.yes? "Create `~/.config/vaccine-finder.toml`?"
   if create_config
-    set_state = prompt.ask("What state would you like to monitor? (Two-letter postal code, please)", required: true)
+    set_state = prompt.ask("What state would you like to monitor? (Two-letter postal code, please)", required: true) do |q|
+      q.modify :up, :remove
+    end
     config.set(:state, value: set_state)
     puts "Ok, time to set zip codes…"
     if prompt.yes? "freemaptools.com has a really helpful tool for getting the zip codes around a radius. Would you like to open it?"
@@ -47,7 +49,7 @@ refresh_rate = config.read["refresh_rate"].to_i
 
 puts
 print pastel.bold "vaccinespotter.org CLI notifier thing"
-print " v0.1.4"
+print " v0.1.5"
 puts pastel.dim ", by Jack MapelLentz (jltml.me)"
 puts pastel.dim "This script uses the wonderful vaccinespotter.org, by Nick Muerdter (github.com/GUI)"
 puts "Checking #{pastel.underline zips.length} zip codes in #{pastel.underline state} every #{pastel.underline refresh_rate} seconds"
