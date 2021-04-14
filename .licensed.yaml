@@ -1,0 +1,14 @@
+sources:
+  bundler: true
+allowed:
+  - mit
+  - apache-2.0
+  - isc
+reviewed:
+  bundler:
+    - curb
+    - racc
+    - rubyzip
+ignored:
+  bundler:
+    - bundler-licensed

@@ -1,0 +1,20 @@
+---
+name: terminal-notifier
+version: 2.0.0
+type: bundler
+summary: Send User Notifications on macOS 10.10 or higher.
+homepage: https://github.com/julienXX/terminal-notifier
+license: mit
+licenses:
+- sources: README.markdown
+  text: |-
+    All the works are available under the MIT license. **Except** for
+    ‘Terminal.icns’, which is a copy of Apple’s Terminal.app icon and as such is
+    copyright of Apple.
+
+    See [LICENSE][LICENSE] for details.
+
+    [HOMEPAGE]: https://github.com/julienXX/terminal-notifier
+    [README]: https://github.com/julienXX/terminal-notifier/blob/master/README.markdown
+    [LICENSE]: https://github.com/julienXX/terminal-notifier/blob/master/Ruby/LICENSE
+notices: []

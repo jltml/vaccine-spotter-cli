@@ -15,3 +15,9 @@ gem "nokogiri", "~> 1.11"
 gem 'pastel', '~> 0.8.0'
 gem "terminal-notifier", "~> 2.0"
 gem 'launchy', '~> 2.5'
+gem 'licensed', :group => 'development'
+# licensed requires cmake and pkg-config (e.g. installed with Homebrew): https://github.com/github/licensed#dependencies
+gem 'bundler-licensed'
+gem 'rake-release', '~> 1.3'
+
+plugin 'bundler-licensed'

@@ -1,0 +1,11 @@
+---
+commands:
+hooks:
+  after-install-all:
+  - "bundler-licensed"
+load_paths:
+  bundler-licensed:
+  - "/Users/jackmapellentz/Desktop/Projects/covid-things/vaccine-finder/.bundle/plugin/gems/bundler-licensed-0.2.0/lib"
+plugin_paths:
+  bundler-licensed: "/Users/jackmapellentz/Desktop/Projects/covid-things/vaccine-finder/.bundle/plugin/gems/bundler-licensed-0.2.0"
+sources:

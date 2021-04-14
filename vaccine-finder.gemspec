@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'vaccine-finder'
-  s.version     = '0.1.6'
+  s.version     = '0.1.7'
   s.summary     = "Get notified of vaccine availability"
   s.description = "This gem will notify you when COVID-19 vaccine appointments are available matching certain criteria (a list of zip codes, type of vaccine, etc). It currently pretty much just wraps the very beta API from the absolutely wonderful vaccinespotter.org, though I hope to add my own website scraping soon too so as to improve response times."
   s.authors     = ["Jack MapelLentz"]
