@@ -1,4 +1,4 @@
 task :release do
-  exec("gem install gem-release")
-  exec("gem release")
+  `gem install gem-release`
+  `gem release`
 end
