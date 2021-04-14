@@ -18,6 +18,6 @@ gem 'launchy', '~> 2.5'
 gem 'licensed', :group => 'development'
 # licensed requires cmake and pkg-config (e.g. installed with Homebrew): https://github.com/github/licensed#dependencies
 gem 'bundler-licensed'
-gem 'rake-release', '~> 1.3'
+gem 'gem-release'
 
 plugin 'bundler-licensed'

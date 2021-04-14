@@ -12,6 +12,7 @@ GEM
       multipart-post (>= 1.2, < 3)
       ruby2_keywords
     faraday-net_http (1.0.1)
+    gem-release (2.2.1)
     launchy (2.5.0)
       addressable (~> 2.7)
     licensed (2.15.2)
@@ -42,8 +43,6 @@ GEM
     pathname-common_prefix (0.0.1)
     public_suffix (4.0.6)
     racc (1.5.2)
-    rake-release (1.3.0)
-      bundler (>= 1.11, < 3)
     regexp_parser (2.1.1)
     reverse_markdown (1.4.0)
       nokogiri
@@ -99,11 +98,11 @@ PLATFORMS
 DEPENDENCIES
   bundler-licensed
   curb (~> 0.9.11)
+  gem-release
   launchy (~> 2.5)
   licensed
   nokogiri (~> 1.11)
   pastel (~> 0.8.0)
-  rake-release (~> 1.3)
   terminal-notifier (~> 2.0)
   toml (~> 0.2.0)
   tty-config (~> 0.4.0)
