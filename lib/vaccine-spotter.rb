@@ -36,6 +36,8 @@ if !config.exist?
     end
     set_zips = prompt.ask("What zip codes would you like to track? You can paste here from freemaptools.com, if you used it (comma-separated list of integers, please)", convert: :int_list, required: true)
     config.set(:zips, value: set_zips)
+    set_vaccine_types = prompt.multi_select("Which types of vaccines would you like to include?", %w(pfizer moderna jj unknown), min: 1, show_help: :always)
+    config.set(:vaccine_types, value: set_vaccine_types)
     set_refresh_rate = prompt.ask("How often should the script check for updates? (seconds)", convert: :int, required: true)
     config.set(:refresh_rate, value: set_refresh_rate)
     puts "Perfect; writing to `~/.config/vaccine-finder.toml`…"
@@ -46,13 +48,20 @@ end
 zips = config.read["zips"]
 state = config.read["state"]
 refresh_rate = config.read["refresh_rate"].to_i
+vaccine_types = config.read["vaccine_types"]
 
 puts
 print pastel.bold "vaccinespotter.org CLI notifier thing"
-print " v0.1.5"
+begin
+  print " v#{Gem.loaded_specs["vaccine-finder"].version}"
+rescue
+  print " [error loading version]"
+end
 puts pastel.dim ", by Jack MapelLentz (jltml.me)"
 puts pastel.dim "This script uses the wonderful vaccinespotter.org, by Nick Muerdter (github.com/GUI)"
 puts "Checking #{pastel.underline zips.length} zip codes in #{pastel.underline state} every #{pastel.underline refresh_rate} seconds"
+puts "Filtering appointments for #{pastel.underline vaccine_types.to_s.tr("[]\"", "")}"
+puts pastel.dim "Press control-C to quit"
 
 excluded = Array.new
 
@@ -72,10 +81,10 @@ loop do
 
   parsed_json["features"].each_index do |i|
     current = parsed_json["features"][i]["properties"]
-    if (current["appointments_available"] == true) and (zips.include?(current["postal_code"].to_i) == true) and (!excluded.include? current["id"].to_i) and (current["appointment_vaccine_types"]["pfizer"] == true or current["appointment_vaccine_types"]["unknown"] == true)
+    if (current["appointments_available"] == true) and (zips.include?(current["postal_code"].to_i) and (!excluded.include? current["id"].to_i) and !(vaccine_types & current["appointment_vaccine_types"].keys).empty?)
       puts "- #{pastel.green.bold current["city"]} #{pastel.green.bold current["provider_brand_name"]}: #{current["url"]}"
       puts " - #{current["appointment_vaccine_types"]} as of #{Time.parse(current["appointments_last_fetched"]).localtime.strftime("%H:%M:%S")}"
-      TerminalNotifier.notify("#{current["provider_brand_name"]} - #{current["city"]}", :title => "vaccine-spotter", :open => "#{current["url"]}")
+      TerminalNotifier.notify("#{current["provider_brand_name"]} - #{current["city"]}", :title => "vaccine-finder", :open => "#{current["url"]}")
       excluded.append current["id"].to_i
     end
   end
