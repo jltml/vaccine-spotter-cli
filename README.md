@@ -1,7 +1,7 @@
 # vaccine-finder — a CLI
 
-### Update: now on RubyGems(!)
-This is my first gem ever! I'm hoping that I can also make it into a Homebrew formula soon, too. For now, install with `gem install vaccine-finder` or see the installation section below.
+### Update: now on RubyGems! and Homebrew!
+This is my first gem and Homebrew formula ever! Homebrew installation is still imperfect (there are `gem pristine` warnings upon run), but meh; hopefully I can fix it soon.
 
 ## Notes
 As of right now, the only places I've written scripts for are:
@@ -11,12 +11,20 @@ As of right now, the only places I've written scripts for are:
 ## Installation
 
 ### Prerequisites
-- **Ruby** and Bundler, preferably installed with [rbenv](https://github.com/rbenv/rbenv)… or something else, I guess, but I'm very partial to rbenv (tested against Ruby 3.0.1)
+- **Ruby** (preferably installed with [rbenv](https://github.com/rbenv/rbenv) if you're using the Cub script or developing)
 - **Chrome**, if you're using the Cub script (it opens it to get a cookie)
 
 ### Actually installing
 
 **For the vaccinespotter.org API CLI:**
+
+Install with Homebrew (easiest):
+
+```sh
+brew install jltml/tap/vaccine-finder
+```
+
+Install with RubyGems (quicker releases, probably):
 
 ```sh
 gem install vaccine-finder
