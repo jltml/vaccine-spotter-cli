@@ -1,0 +1,16 @@
+#################################
+# vaccine-spotter configuration #
+#################################
+
+# This file should go in ~/.config/vaccine-spotter.toml, where ~/ refers to your user directory
+# If you copy this, make sure to rename it and put it in the right place
+# This is just a sample showing all options; it's probably easier to use the setup wizard thing that activates automatically when vaccine-spotter is run and can't find a config file
+
+refresh_rate = 10 # How often the script reruns, in seconds
+state = "CA" # Two-letter postal abbreviation, please — and capitalized
+vaccine_types = ["pfizer","moderna","jj","unknown"] # Options: pfizer, moderna, jj (for Johnson & Johnson), and unknown (when manufactuer is unknown)
+zips = [95570,95519,95518,95521,95502,95525,95524,95501,95564,95534,95555,95537,95546,95503,95551,95573,95550,95549,95540,95563,95556,95547,95548,95562,95536,95528,95527,95565,96046,95532,95531,95569,95545,95526,96010,95571,95558,95568,95538,95554,96031,95514,96048,95553,95543,95567] # List as many zip codes as you'd like here, as a comma-separated list of integers (no quotations)
+
+[sound]
+  play = true # Should a sound play when availibility is found? (true/false)
+  repeat = 5 # If so, how many times should the sound repeat? (integer > 0)

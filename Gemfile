@@ -14,6 +14,7 @@ gem 'webdrivers', '~> 4.0'
 gem "nokogiri", "~> 1.11"
 gem 'pastel', '~> 0.8.0'
 gem "terminal-notifier", "~> 2.0"
+gem 'feep', '~> 0.2.2'
 gem 'launchy', '~> 2.5'
 gem 'licensed', :group => 'development'
 # licensed requires cmake and pkg-config (e.g. installed with Homebrew): https://github.com/github/licensed#dependencies

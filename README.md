@@ -41,8 +41,9 @@ The first time you run `vaccine-spotter`, it will guide you through creating a c
 
 That's it! I hope to add options and more soon.
 
-### Notes:
-I have pretty much no idea how Windows works, so this might not work on it, and notifications definitely don't work for Windows as of now. Sorry about that.
+### Notes & Caveats:
+- I have pretty much no idea how Windows works, so this might not work on it, and notifications definitely don't work for Windows as of now. Sorry about that.
+  - I'm using the [`feep`](https://github.com/michaelchadwick/feep) gem for sounds (if activated in the config). On Windows, this (apparently) requires [`sounder`](http://www.elifulkerson.com/projects/commandline-wav-player.php), a command-line WAV file player. I haven't tested it or anything, though — see [the gem's README](https://github.com/michaelchadwick/feep#feep) for more.
 
 ## Development
 *If anyone actually uses this, PRs are more than welcome!*
