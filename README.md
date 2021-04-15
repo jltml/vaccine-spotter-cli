@@ -1,6 +1,8 @@
 # vaccine-spotter — a CLI for vaccinespotter.org
 ***notifications! filtering! yay!***
 
+![GIF preview of vaccine-spotter command-line interface](https://user-images.githubusercontent.com/8261330/114811965-b0a06180-9d74-11eb-8604-0408ca92acfa.gif)
+
 ### Update: now on RubyGems! and Homebrew!
 This is my first gem and Homebrew formula ever(!), so please bear with me as I figure out how everything works.
 
