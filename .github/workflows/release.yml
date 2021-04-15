@@ -18,7 +18,7 @@ jobs:
           # Optional, defaults to homebrew/core
           tap: jltml/tap
           # Formula name, required
-          formula: vaccine-finder
+          formula: vaccine-spotter
           # Optional, will be determined automatically
           tag: ${{github.ref}}
           # Optional, will be determined automatically

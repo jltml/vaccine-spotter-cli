@@ -5,7 +5,7 @@ hooks:
   - "bundler-licensed"
 load_paths:
   bundler-licensed:
-  - "/Users/jackmapellentz/Desktop/Projects/covid-things/vaccine-finder/.bundle/plugin/gems/bundler-licensed-0.2.0/lib"
+  - "/Users/jackmapellentz/Desktop/Projects/covid-things/vaccine-spotter-cli/.bundle/plugin/gems/bundler-licensed-0.2.0/lib"
 plugin_paths:
-  bundler-licensed: "/Users/jackmapellentz/Desktop/Projects/covid-things/vaccine-finder/.bundle/plugin/gems/bundler-licensed-0.2.0"
+  bundler-licensed: "/Users/jackmapellentz/Desktop/Projects/covid-things/vaccine-spotter-cli/.bundle/plugin/gems/bundler-licensed-0.2.0"
 sources:

@@ -16,7 +16,7 @@ pastel = Pastel.new
 config = TTY::Config.new
 prompt = TTY::Prompt.new
 
-config.filename = "vaccine-finder"
+config.filename = "vaccine-spotter"
 config.extname = ".toml"
 config.append_path "#{Dir.home}/.config"
 
@@ -24,7 +24,7 @@ if !config.exist?
   puts
   puts pastel.bold "Hi, welcome to the unofficial vaccinespotter.org CLI notifier thing!"
   puts "It looks like you don't have a configuration file yet. Would you like to create one?"
-  create_config = prompt.yes? "Create `~/.config/vaccine-finder.toml`?"
+  create_config = prompt.yes? "Create `~/.config/vaccine-spotter.toml`?"
   if create_config
     set_state = prompt.ask("What state would you like to monitor? (Two-letter postal code, please)", required: true) do |q|
       q.modify :up, :remove
@@ -40,7 +40,7 @@ if !config.exist?
     config.set(:vaccine_types, value: set_vaccine_types)
     set_refresh_rate = prompt.ask("How often should the script check for updates? (seconds)", convert: :int, required: true)
     config.set(:refresh_rate, value: set_refresh_rate)
-    puts "Perfect; writing to `~/.config/vaccine-finder.toml`…"
+    puts "Perfect; writing to `~/.config/vaccine-spotter.toml`…"
     config.write
   end
 end
@@ -53,7 +53,7 @@ vaccine_types = config.read["vaccine_types"]
 puts
 print pastel.bold "vaccinespotter.org CLI notifier thing"
 begin
-  print " v#{Gem.loaded_specs["vaccine-finder"].version}"
+  print " v#{Gem.loaded_specs["vaccine-spotter"].version}"
 rescue
   print " [error loading version]"
 end
@@ -84,7 +84,7 @@ loop do
     if (current["appointments_available"] == true) and (zips.include?(current["postal_code"].to_i) and (!excluded.include? current["id"].to_i) and !(vaccine_types & current["appointment_vaccine_types"].keys).empty?)
       puts "- #{pastel.green.bold current["city"]} #{pastel.green.bold current["provider_brand_name"]}: #{current["url"]}"
       puts " - #{current["appointment_vaccine_types"]} as of #{Time.parse(current["appointments_last_fetched"]).localtime.strftime("%H:%M:%S")}"
-      TerminalNotifier.notify("#{current["provider_brand_name"]} - #{current["city"]}", :title => "vaccine-finder", :open => "#{current["url"]}")
+      TerminalNotifier.notify("#{current["provider_brand_name"]} - #{current["city"]}", :title => "vaccine-spotter", :open => "#{current["url"]}")
       excluded.append current["id"].to_i
     end
   end
