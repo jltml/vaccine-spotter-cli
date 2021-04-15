@@ -1,6 +1,12 @@
 # vaccine-spotter — a CLI for vaccinespotter.org
 ***notifications! filtering! yay!***
 
+![Gem](https://img.shields.io/gem/v/vaccine-spotter)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/jltml/vaccine-spotter-cli/Release)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/jltml/homebrew-tap/brew%20test-bot?label=homebrew%20tests)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/jltml/homebrew-tap/brew%20pr-pull?label=homebrew%20publishing)
+![GitHub](https://img.shields.io/github/license/jltml/vaccine-spotter-cli)
+
 ![GIF preview of vaccine-spotter command-line interface](https://user-images.githubusercontent.com/8261330/114811965-b0a06180-9d74-11eb-8604-0408ca92acfa.gif)
 
 ### Update: now on RubyGems! and Homebrew!
