@@ -37,9 +37,9 @@ gem install vaccine-spotter
 vaccine-spotter
 ```
 
-The first time you run `vaccine-spotter`, it will guide you through creating a configuration file at ~/.config/vaccine-spotter.toml. The CLI currently doesn't parse options, since I haven't had the chance to add that yet (so there's no `--help` or `-v` or anything yet).
+The first time you run `vaccine-spotter`, it will guide you through creating a configuration file at ~/.config/vaccine-spotter.toml.
 
-That's it! I hope to add options and more soon.
+That's it! Run `vaccine-spotter help` to see all commands.
 
 ### Notes & Caveats:
 - I have pretty much no idea how Windows works, so this might not work on it, and notifications definitely don't work for Windows as of now. Sorry about that.

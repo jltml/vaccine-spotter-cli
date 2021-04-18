@@ -108,8 +108,10 @@ DEPENDENCIES
   launchy (~> 2.5)
   licensed
   nokogiri (~> 1.11)
+  os (~> 0.9.6)
   pastel (~> 0.8.0)
   terminal-notifier (~> 2.0)
+  thor (~> 1.0)
   toml (~> 0.2.0)
   tty-config (~> 0.4.0)
   tty-logger (~> 0.6.0)

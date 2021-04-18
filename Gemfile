@@ -1,5 +1,6 @@
 source "https://rubygems.org"
 
+gem 'thor', '~> 1.0'
 gem "curb", "~> 0.9.11"
 gem "tty-progressbar", "~> 0.18.2"
 # gem "tty-option", "~> 0.1.0"
@@ -16,9 +17,10 @@ gem 'pastel', '~> 0.8.0'
 gem "terminal-notifier", "~> 2.0"
 gem 'feep', '~> 0.2.2'
 gem 'launchy', '~> 2.5'
+gem 'os', '~> 0.9.6'
 gem 'licensed', :group => 'development'
 # licensed requires cmake and pkg-config (e.g. installed with Homebrew): https://github.com/github/licensed#dependencies
-gem 'bundler-licensed'
+gem 'bundler-licensed', :group => 'development'
 gem 'gem-release'
 
-plugin 'bundler-licensed'
+plugin 'bundler-licensed', :group => 'development'

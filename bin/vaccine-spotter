@@ -1,3 +1,65 @@
 #!/usr/bin/env ruby
 
-require 'vaccine-spotter'
+require "thor"
+
+class MyCLI < Thor
+
+  desc "start", "Start vaccine-spotter — the default task when no command or options are given"
+  def start
+    begin
+      require 'vaccine-spotter'
+    rescue LoadError
+      require_relative './../lib/vaccine-spotter'
+    end
+  end
+
+  desc "check", "Run vaccine-spotter once instead of looping"
+  def check
+    $loop = false
+    begin
+      require 'vaccine-spotter'
+    rescue LoadError
+      require_relative './../lib/vaccine-spotter'
+    end
+  end
+
+  desc "config", "Open config file (~/.config/vaccine-spotter.toml) with default editor"
+  def config
+    system("open ~/.config/vaccine-spotter.toml")
+  end
+
+  desc "version", "Print version and OS information"
+  def version
+    begin
+      puts "vaccinespotter.org CLI notifier thing v#{Gem.loaded_specs["vaccine-spotter"].version}"
+    rescue
+      puts "(!) vaccine-spotter: error loading version"
+    end
+    begin
+      require 'os'
+    rescue
+      puts "(!) vaccine-spotter: couldn't load OS gem"
+    end
+    begin
+      puts OS.report
+      puts "ruby_bin: #{OS.ruby_bin}"
+    rescue
+      puts "(!) vaccine-spotter: couldn't print `OS.report`"
+    end
+  end
+
+  default_task :start
+
+end
+
+# The following is from https://stackoverflow.com/a/49044225/
+help_commands = Thor::HELP_MAPPINGS + ["help"]
+if help_commands.any? { |cmd| ARGV.include? cmd }
+  help_commands.each do |cmd|
+    if match = ARGV.delete(cmd)
+      ARGV.unshift match
+    end
+  end
+end
+
+MyCLI.start(ARGV)

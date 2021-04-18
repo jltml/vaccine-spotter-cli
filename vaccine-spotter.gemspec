@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'vaccine-spotter'
-  s.version     = '0.2.1'
+  s.version     = '0.2.2'
   s.summary     = "Get notified of vaccine availability"
   s.description = "This gem will notify you when COVID-19 vaccine appointments are available matching certain criteria (a list of zip codes, type of vaccine, etc) using the very beta API from the absolutely wonderful vaccinespotter.org."
   s.authors     = ["Jack MapelLentz"]
@@ -25,4 +25,5 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency "terminal-notifier", "~> 2.0"
   s.add_runtime_dependency 'launchy', '~> 2.5'
   s.add_runtime_dependency 'feep', '~> 0.2.2'
+  s.add_runtime_dependency 'os', '~> 0.9.6'
 end
