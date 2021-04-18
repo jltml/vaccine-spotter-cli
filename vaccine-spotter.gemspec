@@ -26,4 +26,5 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'launchy', '~> 2.5'
   s.add_runtime_dependency 'feep', '~> 0.2.2'
   s.add_runtime_dependency 'os', '~> 0.9.6'
+  s.add_runtime_dependency 'thor', '~> 1.0'
 end
