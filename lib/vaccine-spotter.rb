@@ -137,22 +137,18 @@ begin
 
     puts
 
-    # if (Time.now.strftime("%M").to_i%5 == 0) && (Time.now.strftime("%S").to_i < refresh_rate)
-    #   excluded.clear
-    #   puts "List of excluded/checked stores cleared"
-    #   number_excluded = excluded.length
-    # end
-
     new_appointment = false
 
     # This is the main area thing — it loops through each zip code and finds matches
     parsed_json["features"].each_index do |i|
       current = parsed_json["features"][i]["properties"]
 
+      # Checks if locations that previously had appointments no longer have availability
       if (excluded.keys.include? current["id"]) && (current["appointments_available"] == false)
         print "- "
-        puts pastel.red "Appointments no longer available at #{pastel.bold current["city"].split.map(&:capitalize).join(' ') + ' ' + current["provider_brand_name"]} as of #{Time.parse(current["appointments_last_fetched"]).localtime.strftime("%H:%M:%S")}"
+        puts pastel.red "#{pastel.bold current["city"].split.map(&:capitalize).join(' ') + ' ' + current["provider_brand_name"]}: Appointments no longer available as of #{Time.parse(current["appointments_last_fetched"]).localtime.strftime("%H:%M:%S")}"
         excluded.delete current["id"]
+        initial_number_excluded = excluded.length
       end
 
       # Finds matches

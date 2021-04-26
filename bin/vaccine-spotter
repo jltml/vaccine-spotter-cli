@@ -47,6 +47,7 @@ class MyCLI < Thor
       puts "(!) vaccine-spotter: couldn't print `OS.report`"
     end
   end
+  map %w[--version -v] => :version
 
   default_task :start
 

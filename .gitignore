@@ -2,3 +2,4 @@
 /ignore
 *.gem
 .bundle
+Gemfile.lock

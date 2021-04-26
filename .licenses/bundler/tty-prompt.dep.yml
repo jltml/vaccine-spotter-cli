@@ -1,6 +1,6 @@
 ---
 name: tty-prompt
-version: 0.23.0
+version: 0.23.1
 type: bundler
 summary: A beautiful and powerful interactive command line prompt.
 homepage: https://ttytoolkit.org
@@ -8,7 +8,7 @@ license: mit
 licenses:
 - sources: LICENSE.txt
   text: |
-    Copyright (c) 2015 Piotr Murach
+    Copyright (c) 2015 Piotr Murach (piotrmurach.com)
 
     MIT License
 
